@@ -47,3 +47,13 @@ class ProductSchema(PlainProductSchema):
 
 class AdvertisementSchema(PlainAdvertisementSchema):
     products = fields.List(fields.Nested(PlainProductSchema()), dump_only=True)
+
+
+class SessionSchema(Schema):
+    id = fields.Int(dump_only=True)
+    user_id = fields.Int(required=True)
+    first_name = fields.Str(required=True)
+    last_name = fields.Str(required=True)
+    username = fields.Str(required=True)
+    access_token = fields.Str(required=True)
+    refresh_token = fields.Str(required=True)
