@@ -32,7 +32,6 @@ class Product(MethodView):
             product.product_description = product_data["product_description"]
             product.price = product_data["price"]
             product.in_stock = product_data["in_stock"]
-            product.in_stock = product_data["in_stock"]
             product.media_url = product_data["media_url"]
             product.ad_id = product_data["ad_id"]
         else:
